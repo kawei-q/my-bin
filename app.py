@@ -65,7 +65,7 @@ with gr.Blocks(title="Prompt-to-Image Generator") as demo:
         with gr.Column():
             desc_input = gr.Textbox(label="文本描述", placeholder="例如：空中的魔法树屋")
             style_dropdown = gr.Dropdown(
-                choices=["幻想风格", "赛博朋克", , "写实主义"], 
+                choices=["幻想风格", "赛博朋克",  "写实主义"], 
                 label="选择风格"
             )
             model_radio = gr.Radio(
