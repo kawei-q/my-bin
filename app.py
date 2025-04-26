@@ -83,8 +83,8 @@ with gr.Blocks(title="Prompt-to-Image Generator") as demo:
         with gr.Column():
             desc_input = gr.Textbox(label="文本描述", placeholder="例如：空中的魔法树屋")
             style_dropdown = gr.Dropdown(
-                choices=["幻想风格", "赛博朋克", "写实主义"],
-                label="选择风格"
+                choices=["Fancy", "Science", "Reality"],
+                label="choice"
             )
             model_radio = gr.Radio(
                 choices=["SD v1.5", "SDXL"],
@@ -96,16 +96,16 @@ with gr.Blocks(title="Prompt-to-Image Generator") as demo:
                 label="Guidance Scale"
             )
             neg_text = gr.Textbox(
-                label="反向提示词",
-                placeholder="排除内容（如：低分辨率、水印）"
+                label="reverse_prompt",
+                
             )
-            use_voice = gr.Checkbox(label="启用语音输入（加分项）")
-            audio_input = gr.Audio(type="filepath", label="语音输入")
-            generate_btn = gr.Button("生成图像")
+            use_voice = gr.Checkbox(label="voice_input")
+            audio_input = gr.Audio(type="filepath", label="voice_input")
+            generate_btn = gr.Button("generate")
 
         with gr.Column():
-            prompt_output = gr.Textbox(label="生成的提示词")
-            image_output = gr.Image(label="生成的图像")
+            prompt_output = gr.Textbox(label="generated prompt")
+            image_output = gr.Image(label="generated word")
 
     # 绑定语音转文字（仅当启用时）
     def conditional_transcribe(audio_path, use_voice_flag):
