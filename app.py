@@ -81,7 +81,7 @@ with gr.Blocks(title="Prompt-to-Image Generator") as demo:
 
     with gr.Row():
         with gr.Column():
-            desc_input = gr.Textbox(label="文本描述", placeholder="例如：空中的魔法树屋")
+            desc_input = gr.Textbox(label="文本描述", placeholder="Example:blue sky")
             style_dropdown = gr.Dropdown(
                 choices=["Fancy", "Science", "Reality"],
                 label="choice"
@@ -89,7 +89,7 @@ with gr.Blocks(title="Prompt-to-Image Generator") as demo:
             model_radio = gr.Radio(
                 choices=["SD v1.5", "SDXL"],
                 value="SD v1.5",
-                label="选择模型"
+                label="choice"
             )
             guidance_slider = gr.Slider(
                 minimum=0, maximum=20, step=0.5, value=7.5,
