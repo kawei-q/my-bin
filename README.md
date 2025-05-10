@@ -12,3 +12,4 @@ short_description: 'no'
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Update README
